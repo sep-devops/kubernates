@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: hello-rc
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     app: devopsnginx
   template:
@@ -16,4 +16,3 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-
