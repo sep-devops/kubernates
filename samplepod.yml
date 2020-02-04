@@ -1,0 +1,12 @@
+apiversion: v1
+kind: pod
+metadata:
+  name: samplepod
+  labels:
+    app: sample-pod
+spec:
+  containers:
+  - name: ngnix-container
+    image: ngnix
+    ports:
+    - containerport: 80    
