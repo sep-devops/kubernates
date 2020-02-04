@@ -8,13 +8,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-    app: mydeploy            # selector name and template of label must be same
-
+      app: mydeploy            # selector name and template of label must be same
   template:
     metadata:
       labels:
         app: mydeploy
-
     spec:
       containers:
       - name: naglogin
