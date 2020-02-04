@@ -1,22 +1,20 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: nag-deploy
-  labels:
-    app: mydeploy
+  name: myjavaapp-rc
 spec:
   replicas: 2
   selector:
-    app: mydeploy 
-    version: 2.7.01           # selector name and template of label must be same
+    app: myjavaapp
+    version: 2.7.02
   template:
     metadata:
       labels:
-        app: mydeploy
-        version: 2.7.01
+        app: myjavaapp
+        version: 2.7.02
     spec:
       containers:
-      - name: naglogin
+      - name: myjavaapp-container
         image: maha4iac/mymahalogin:1
         ports:
-        - containerport: 8080 
+        - containerPort: 8080
