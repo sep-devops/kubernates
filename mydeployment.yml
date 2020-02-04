@@ -1,24 +1,23 @@
 apiVersion: v1
 kind: Deployment
 metadata:
- name: nag-deploy
- labels:
-  app: mydeploy
-spec:
- replicas: 3
- selector:
-  matckLabels:
-   app: mydeploy            # selector name and template of label must be same
-
-
- template:
-  metadata:
-   labels:
+  name: nag-deploy
+  labels:
     app: mydeploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+    app: mydeploy            # selector name and template of label must be same
 
-   spec:
-    containers:
-    - name: naglogin
-      image: maha4iac/mymahalogin:1
-      ports:
-      - containerport: 8080 
+  template:
+    metadata:
+      labels:
+        app: mydeploy
+
+    spec:
+      containers:
+      - name: naglogin
+        image: maha4iac/mymahalogin:1
+        ports:
+        - containerport: 8080 
