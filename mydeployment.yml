@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-Kind: Deployment
+apiVersion: v1
+kind: Deployment
 metadata:
  name: nag-deploy
  labels:
