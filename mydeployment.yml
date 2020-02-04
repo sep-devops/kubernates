@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: ReplicationController
 metadata:
   name: nag-deploy
   labels:
@@ -7,8 +7,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels:
-      app: mydeploy            # selector name and template of label must be same
+    app: mydeploy            # selector name and template of label must be same
   template:
     metadata:
       labels:
