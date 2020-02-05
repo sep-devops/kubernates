@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: sample-rc-2
+spec:
+  replicas: 2
+  selector:  
+      app: myapp
+      version: 2.7.03
+  template:
+    metadata:
+      labels:
+        app: myapp
+        version: 2.7.03
+    spec:
+      containers:
+      - name: deployment
+        image: maha4iac/mymahalogin:3  
+        ports:
+        - containerPort: 8080 
