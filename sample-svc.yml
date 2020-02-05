@@ -4,7 +4,7 @@ metadata:
   name: samplesvc
   labels:
     app: myapp
-    version: 2.7.03
+    version: 2.7.01
 spec:
   type: NodePort
   ports:
@@ -13,5 +13,5 @@ spec:
     protocol: TCP
   selector:
     app: myapp
-    version: 2.7.03  
+    version: 2.7.01  
         
